@@ -1,0 +1,243 @@
+/*导航栏*/
+body {
+    margin: 0;
+}
+
+.clearfix {
+    clear: both;
+}
+
+nav {
+    font-family: Helvetica;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.2);;
+}
+
+nav ul {
+    width: 90%;
+    max-width: 1024px;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #9d9d9d;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+nav ul li a:hover {
+    color: #0f9fdb;
+}
+
+.current_page a {
+    color: white;
+}
+
+#menu_button_wrapper {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive for smaller screens */
+
+@media (max-width: 760px) {
+    #menu_button_wrapper {
+        display: block;
+        padding: 1em;
+        color: #9d9d9d;
+        border-bottom: 1px none #101010;
+        -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .1);
+        box-shadow: 0 1px 0 rgba(255, 255, 255, .1);
+        margin-bottom: .5em;
+    }
+
+    #menu_button {
+        box-sizing: border-box;
+        float: right;
+        padding: .1em 0.5em;
+        border: 1px solid #333;
+        border-radius: 5px;
+        color: #cccccc;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    #menu_button:hover {
+        cursor: pointer;
+        background-color: #333;
+    }
+
+    #hamburger {
+        float: right;
+        padding-top: .15em;
+    }
+
+    #menu_button span {
+        display: block;
+        background-color: #fff;
+        width: .2em;
+        height: .15em;
+        border-radius: 1px;
+        margin-bottom: .2em;
+    }
+
+    nav ul {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        width: 100%;
+    }
+
+}
+
+/*中间框*/
+.am-g-fixed2 {
+    max-width: 500px;
+    font-size: 1.2rem;
+}
+
+.chat-content-container2 {
+    max-width: 900px;
+    height: 40rem;
+    overflow-y: auto;
+    border: 3px outset #10aeec;
+}
+
+/*标题，侧栏，底部*/
+.my-head {
+    margin-top: 0;
+    text-align: center;
+}
+
+.my-sidebar {
+    padding-right: 0;
+    border-right: 1px solid #eeeeee;
+}
+
+.my-footer {
+    border-top: 1px solid #eeeeee;
+    padding: 10px 0;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.chattext {
+    text-align: center;
+}
+
+.text2 {
+    width: 90%;
+    resize: none;
+    border: #0e90d2;
+    background: rgba(0, 0, 0, 0);
+    border-style: none none double none;
+}
+
+/*退出按钮*/
+
+.draw-outline {
+    box-shadow: inset 0 0 0 1px #0f9fdb;
+    color: #0f9ae0;
+    -webkit-transition: color 0.25s 0.125s;
+    transition: color 0.25s 0.125s;
+    position: relative;
+}
+
+.draw-outline::before, .draw-outline::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.draw-outline::before {
+    top: 0;
+    right: 0;
+}
+
+.draw-outline::after {
+    left: 0;
+    bottom: 0;
+}
+
+.draw-outline::after {
+    border-top-width: 4px;
+    border-left-width: 4px;
+}
+
+.draw-outline::before {
+    border-bottom-width: 4px;
+    border-right-width: 4px;
+}
+
+.draw-outline:hover {
+    color: #9d9d9d;
+}
+
+.draw-outline:hover::before, .draw-outline:hover::after {
+    border-color: #9d9d9d;
+    -webkit-transition: border-color 0s, height 0.25s, width 0.25s;
+    transition: border-color 0s, height 0.25s, width 0.25s;
+    width: 100%;
+    height: 100%;
+}
+
+.draw-outline:hover::before {
+    -webkit-transition-delay: 0s, 0s, 0.25s;
+    transition-delay: 0s, 0s, 0.25s;
+}
+
+.draw-outline:hover::after {
+    -webkit-transition-delay: 0.5s, 0.5s, 0.75s;
+    transition-delay: 0.5s, 0.5s, 0.75s;
+}
+
+.btn {
+    background: none;
+    /*border: none;*/
+    cursor: pointer;
+    line-height: 1.5;
+    font: 700 1.2rem 'Roboto Slab', sans-serif;
+    padding: 0.5em 1em;
+    letter-spacing: 0.05rem;
+}
+
+.btn:focus {
+    outline: 2px dotted #55d7dc;
+}
+
+.wenbenkuang {
+    border: none;
+    margin-right: 15px;
+}
+
+.choose {
+    float: left;
+    margin-right: 15px;
+}
